@@ -16,7 +16,7 @@ function call($controller, $action) {
   
 }
 $routes = array('pages' => ['home', 'error'],
-                     'posts' => ['index', 'show']);
+                     'posts' => ['index', 'show','create','add','insert']);
 
 if (array_key_exists($controller, $routes)) {
  if (in_array($action, $routes[$controller])) {
