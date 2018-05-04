@@ -1,0 +1,12 @@
+Première étape: index.php
+Deuxième étape: créer 3 sous-dossiers (models, controller, views. Le dossier views contiendra 2 sous-dossiers: posts et pages)
+Troisième étape: dans le sous-dossier pages, créer deux pages error.php et home.php
+Dans le sous-dossier posts, créer un autre index.php et une page layout.php
+La page index.php sera lu et affiché en premier grâce au lien: require_once ('views/posts/layout.php');
+Ensuite, ce sera la page layout.php du sous-dossier posts qui sera lu; elle redirigera vers la page routes.php grâce à  require_once('routes.php');
+routes.php contient un tableau de routes :$routes = array('pages' => ['home', 'error'], 'posts' => ['index', 'show','create', 'update','add', 'edit','delete','supp','insert']); qui définit les actions du controller (function call($controller, $action)) ou renvoie vers la page error.php
+Dans le sous-dossier controller, créer une page pages-controller: la classe pages_controller va charger les pages home.php et error.php
+Toujours dans le sous-dossier controller, créer une page Posts-controller: dans la classe Post-controller créer toutes les fonctions qui serviront à l'utilisation des posts du blog: show, create, insert... Chacune de ces fonctions renvoient à une page php créee dans le sous-dossier Posts du dossier Views
+Le sous-dossier posts contient toutes les actions déterminées dans posts-controller; par exemple, la page create.php va permettre l'envoi d'un billet
+IMPORTANT!!! Créer une page connexion.php qui servira à établir la connexion à une base de données (créée au préalable avec PHPmyAdmin) self::$instance = new PDO('mysql:host=localhost;dbname=miniblog_mvc', 'root', '', $pdo_options);
+IMPORTANT!!! Dans le dossier models, créer une page post.php, où sera configuré la classe POST et les fonctions liées. COmme insert (pour la base de données:$requete = "INSERT INTO posts (`title`, `author`,`content`,`created_date`) VALUES (:title, :author, :content, NOW())";)),find, all...
