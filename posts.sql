@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Ven 04 Mai 2018 à 09:12
+-- Généré le :  Ven 04 Mai 2018 à 11:21
 -- Version du serveur :  5.7.21-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.22-0ubuntu0.16.04.1
 
@@ -45,7 +45,7 @@ INSERT INTO `posts` (`id`, `title`, `author`, `content`, `created_date`) VALUES
 (4, 'trtrtrtr', 'trtrtrt', 'trtrtrtr', '2018-05-03 16:40:18'),
 (5, ' fb n,', ' ,vhfhgb ', 'hgdnhdg', '2018-05-03 16:41:01'),
 (6, 'nghfj', 'k;u,jhnbgv', 'vvvo;ku,jynh', '2018-05-03 16:45:22'),
-(7, 'Test', 'Chris', 'Trop contente que Ã§a marche! ', '2018-05-04 09:11:36');
+(19, 'Dernier essai', 'Chris', 'C\'est bon? ', '2018-05-04 11:20:44');
 
 --
 -- Index pour les tables exportées
@@ -65,7 +65,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
