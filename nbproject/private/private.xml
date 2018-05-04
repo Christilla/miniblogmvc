@@ -10,7 +10,11 @@
             <file>file:/home/Christilla/ServeurWeb/miniblogmvc/controller/posts_controller.php</file>
             <file>file:/home/Christilla/ServeurWeb/miniblogmvc/models/post.php</file>
             <file>file:/home/Christilla/ServeurWeb/miniblogmvc/views/posts/create.php</file>
+<<<<<<< HEAD
             <file>file:/home/Christilla/ServeurWeb/miniblogmvc/views/posts/update.php</file>
+=======
+            <file>file:/home/Christilla/ServeurWeb/miniblogmvc/views/posts/layout.php</file>
+>>>>>>> 27f435d8f3569c5e68b47aad29af84d6431ddf8b
             <file>file:/home/Christilla/ServeurWeb/miniblogmvc/views/posts/show.php</file>
         </group>
     </open-files>

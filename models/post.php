@@ -42,6 +42,7 @@ class Post {
   return new Post($post['id'],$post['title'], $post['author'], $post['content'], $post['created_date']);
  }
 
+<<<<<<< HEAD
  public static function insert($array) {
      //initialise connexion to db
    $title = $_POST['title'];
@@ -96,5 +97,48 @@ public static function delete($array){
 }
 
 
+=======
+ public static function create($array) {
+
+  //initialise connexion to db
+
+  $db = Db::getInstance();
+  $champs = '';
+  $marqueurs = '';
+
+  foreach ($array as $key => $value) {
+
+   $champs = '' . $key . ', ';
+
+   $marqueurs = ':' . $key . ', ';
+  }
+
+  $champs = rtrim($champs, ', ');
+  $marqueurs = rtrim($marquers, ', ');
+
+
+//var_dump($champs);
+//***************** requete **************
+
+  $req = "INSERT INTO posts (" . $champs . ") VALUES (" . $marqueurs . ")";
+  $requete = $db->prepare($req);
+
+  foreach ($array as $key => $value) {
+   if (is_string($value)) {
+    $pdo_param = PDO::PARAM_STR;
+   } else {
+
+    $pdo_param = PDO::PARAM_INT;
+   }
+
+   $requete->bindValue(":" . $key, $value, $pdo_param);
+   //var_dump($requete);
+  }
+  $requete->execute();
+  return $db->lastInsertId('id');
+ }
+
+ 
+>>>>>>> 27f435d8f3569c5e68b47aad29af84d6431ddf8b
 
 }
