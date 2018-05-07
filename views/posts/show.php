@@ -11,9 +11,26 @@
 <h3>Ajouter un commentaire:</h3>
 
 
-<form method="Post" action="?controller=posts&action=insert">
+<form method="Post" action="?controller=comments&action=insert">
+ <p>Auteur:</p>
+ <p><input type="text" name="author"/></p>
+ <p>Contenu:</p>
  <p><textarea id='content' name='content' ></textarea></p>
  <p><input type="submit" id="submit"/></p>
+ <input type="hidden" name="id_post" value=<?= $_GET['id']; ?> />
  
 </form>
-
+<p>
+<?php
+    foreach($comments as $comment){
+     echo 'auteur : ',$comment->author;
+     echo '<br>';
+     echo 'content : ', $comment->content;
+     echo '<br>';
+     echo 'date : ', $comment->created_date;
+     echo '<br>', '<br>';
+    }
+    
+//printr($comments);
+?>
+</p>

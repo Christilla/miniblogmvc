@@ -10,6 +10,13 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 }
 
 require_once ('views/posts/layout.php');
+
+
+function printr($pWhat){
+ echo '<pre>';
+ print_r($pWhat);
+ echo '</pre>';
+}
 ?>
 
 

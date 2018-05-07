@@ -5,9 +5,6 @@ class PostsController {
 
  public static function index() {
 
-//class PostsController {
-// 
-// public function index() {
 
   $posts = Post::all();
   require_once ('views/posts/index.php');
@@ -21,6 +18,7 @@ class PostsController {
    
   } else {
    $post = Post::find($_GET['id']);
+   $comments = Comment::getCommentsByIdPost($_GET['id']);
    require_once ('views/posts/show.php');
   }
  }
@@ -60,13 +58,7 @@ class PostsController {
    require_once ('views/posts/show.php');
     }
  
-// public function update() {
-//  if (!isset($_GET['id']))
-//   return call('pages', 'error');
-//
-//  $post = Post::find($_GET['id']);
-//  require_once ('views/posts/update.php');
-// }
+
  
    public static function supp(){
         if (!isset($_GET['id'])){
@@ -85,8 +77,7 @@ class PostsController {
          
             ));
             self::index();
-//        $posts = Post::all();
-//        require_once('views/posts/index.php');
+
     }
  
  

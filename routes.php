@@ -7,24 +7,31 @@ function call($controller, $action) {
   case ('pages'):
    $controller = new PagesController();
    break;
+  
   case ('posts'):
    //chargement des models
 
    require_once ('models/post.php');
+   require_once ('models/comment.php');
 
    $controller = new PostsController();
    break;
-//  case ('comments'):
-//
-//   require_once ('models/comments.php');
-//   $controller = new CommentsController();
-//   break;
+
+  case ('comments'):
+
+   require_once ('models/comment.php');
+   $controller = new CommentController();
+   break;
+  
+ 
  }
  $controller->{ $action}();
 }
 
 $routes = array('pages' => ['home', 'error'],
-    'posts' => ['index', 'show', 'create', 'update', 'add', 'edit', 'delete', 'supp', 'insert']);
+    'posts' => ['index', 'show', 'create', 'update', 'add', 'edit', 'delete', 'supp', 'insert'],
+     'comments' => ['insert','delete','show'])   
+        ;
 
 
 
