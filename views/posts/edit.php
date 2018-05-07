@@ -1,7 +1,7 @@
-<p>Ajouter un billet</p>
+<p>Mettre à jour</p>
 
 
-<form method="Post" action="?controller=posts&action=insert">
+<form method="POST" action="?controller=posts&action=update&id=<?php echo $post->id; ?>">
  <p><input type="text" name="title" id="title" /></p>
  <p><label>auteur</label></p>
  <p><input type="text" name="author" id="author"/></p>
@@ -13,5 +13,3 @@
  <p><input type="submit" id="submit"/></p>
  
 </form>
-
-

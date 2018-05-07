@@ -11,6 +11,7 @@
 
 
 <a href='?controller=posts&action=create'>Créer un nouveau post</a>
+<a href ='?controller=posts&action=edit&id=<?php echo $post->id ?>'>Modifier</a>
 <a href ='?controller=posts&action=supp&id=<?php echo $post->id ?>'>Supprimer</a>
  
 

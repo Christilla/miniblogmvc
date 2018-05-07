@@ -40,13 +40,33 @@ class PostsController {
   require_once('views/posts/index.php');
  }
 
- public function update() {
-  if (!isset($_GET['id']))
-   return call('pages', 'error');
-
-  $post = Post::find($_GET['id']);
-  require_once ('views/posts/update.php');
- }
+ public static function edit(){
+        if(!isset($_GET['id'])){
+                return call ('page', 'error');
+       }else{
+          $post = Post::find($_GET['id']);
+          require_once('views/posts/edit.php'); 
+       }
+    }
+    
+    public static function update() {
+        $post = Post::update(array(
+            'id' => $_GET['id'],
+            'title' => $_POST['title'],
+            'author' => $_POST['author'],
+            'content' => $_POST['content']
+            ));
+         $post = Post::find($_GET['id']);
+   require_once ('views/posts/show.php');
+    }
+ 
+// public function update() {
+//  if (!isset($_GET['id']))
+//   return call('pages', 'error');
+//
+//  $post = Post::find($_GET['id']);
+//  require_once ('views/posts/update.php');
+// }
  
    public static function supp(){
         if (!isset($_GET['id'])){
