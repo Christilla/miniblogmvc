@@ -86,7 +86,7 @@ public static function delete($array){
 
     $db= db::getInstance();
 
-    $req = $db->prepare('DELETE FROM `post` WHERE id = :id ');
+    $req = $db->prepare('DELETE FROM `posts` WHERE id = :id ');
 
     $req->bindValue(':id', $id, PDO::PARAM_INT);
 
@@ -97,47 +97,5 @@ public static function delete($array){
 }
 
 
-//
-// public static function create($array) {
-//
-//  //initialise connexion to db
-//
-//  $db = Db::getInstance();
-//  $champs = '';
-//  $marqueurs = '';
-//
-//  foreach ($array as $key => $value) {
-//
-//   $champs = '' . $key . ', ';
-//
-//   $marqueurs = ':' . $key . ', ';
-//  }
-//
-//  $champs = rtrim($champs, ', ');
-//  $marqueurs = rtrim($marquers, ', ');
-//
-//
-////var_dump($champs);
-////***************** requete **************
-//
-//  $req = "INSERT INTO posts (" . $champs . ") VALUES (" . $marqueurs . ")";
-//  $requete = $db->prepare($req);
-//
-//  foreach ($array as $key => $value) {
-//   if (is_string($value)) {
-//    $pdo_param = PDO::PARAM_STR;
-//   } else {
-//
-//    $pdo_param = PDO::PARAM_INT;
-//   }
-//
-//   $requete->bindValue(":" . $key, $value, $pdo_param);
-//   //var_dump($requete);
-//  }
-//  $requete->execute();
-//  return $db->lastInsertId('id');
-// }
-//
-// 
-//
+
 }
