@@ -1,4 +1,4 @@
-<p>Voici une liste de tout les posts:</p>
+<h1>Liste de tout les posts:</h1>
 
 <?php foreach($posts as $post) { ?>
 <p>

@@ -1,4 +1,4 @@
-<p>Ajouter un billet</p>
+<h2>Ajouter un billet</h2>
 
 
 <form method="Post" action="?controller=posts&action=insert">
@@ -10,7 +10,7 @@
 
 
  
- <p><input type="submit" id="submit"/></p>
+ <p><input type="submit" id="submit" value='Envoyer'/></p>
  
 </form>
 

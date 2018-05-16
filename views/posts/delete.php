@@ -1,4 +1,4 @@
-<?php echo ("HI") ?>
+
 
 
 <form method="POST" action='?controller=posts&action=delete&id=<?php echo $post->id ?>'>

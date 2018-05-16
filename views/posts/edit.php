@@ -1,4 +1,4 @@
-<p>Mettre à jour</p>
+<h2>Mettre à jour</h2>
 
 
 <form method="POST" action="?controller=posts&action=update&id=<?php echo $post->id; ?>">
@@ -10,6 +10,6 @@
 
 
  
- <p><input type="submit" id="submit"/></p>
+ <p><input type="submit" id="submit" value='Envoyer'/></p>
  
 </form>

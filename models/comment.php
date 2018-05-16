@@ -47,9 +47,10 @@ class Comment{
  }
 
    public static function insert($pAuthor, $pContent, $pIdPost) {
+    echo ('Hi!');
     //initialise connexion to db
     $db = Db::getInstance();
-    //var_dump($champs);
+//    var_dump($champs);
     //***************** requete **************
     $requete = "INSERT INTO commentaires (`id_post`, `author`,`content`,`created_date`) VALUES (:id_post, :author, :content, NOW())";
 //    echo $requete;

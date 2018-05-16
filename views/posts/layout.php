@@ -13,6 +13,7 @@ and open the template in the editor.
   <header>
    <a href='/'>Home</a>
    <a href='?controller=posts&action=index'>Posts</a>
+   <a href='?controller=annonces&action=index'>Annonces</a>
   </header>
   
   

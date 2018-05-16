@@ -18,7 +18,8 @@ class CommentController {
   $lastId = Comment::insert($_POST['author'], $_POST['content'], (int)$_POST['id_post']);
   $comments = Comment::getCommentsByIdPost((int)$_POST['id_post']);
 //  echo $lastId;
-//  header('location:?controller=posts&action=show&id='.(int)$_POST['id_post']);
+  header('location:?controller=posts&action=show&id='.(int)$_POST['id_post']);
+  //Cette ligne renvoie sur la page du post
 //  require_once ('views/comments/create.php');
  }
  

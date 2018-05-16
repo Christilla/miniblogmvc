@@ -7,12 +7,13 @@ class PostsController {
 
 
   $posts = Post::all();
+  //fonction all crée dans models/post qui va se connecter à la BDD grâce à SELECT
   require_once ('views/posts/index.php');
  }
 
 
  public function show() {
-
+   //ma page show dans "vue" permet de voir le contenu des posts et de faire des com
   if (!isset($_GET['id'])){
    return call('pages', 'error'); 
    
